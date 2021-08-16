@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <title>Snipper Landing Page</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div id="logo">
+        <a href="index.html"
+          ><img src="./Assets/Logo.svg" alt="Logo of Snippets"
+        /></a>
+      </div>
+      <ul class="mobile-menu">
+        <li id="menu">
+          <img src="./Assets/Hamburger Menu.svg" alt="Hamburger Menu" />
+        </li>
+      </ul>
+      <ul class="desktop-menu">
+        <li>
+          <a href="#"
+            ><img src="./Assets/Search Icon.svg" alt="Search Icon"
+          /></a>
+        </li>
+        <li><a href="#">Sign In</a></li>
+        <li>
+          <div class="button">
+            <a href="">Get Started <span>- It's Free</span></a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <script type="text/javascript">
+      $(window).on("scroll", function () {
+        if ($(window).scrollTop()) {
+          $("nav").addClass("white");
+        } else {
+          $("nav").removeClass("white");
+        }
+      });
+    </script>
+
+    <main>
+      <section class="main-section">
+        <h1 class="title">Gorgeous Code Snippets</h1>
+        <p class="caption">
+          With Snippets, create fully customizable code snippets in a matter of
+          seconds right from your browser.
+        </p>
+        <div class="button">
+          <a href="#">Get Started <span>- it's Free</span></a>
+        </div>
+        <p class="info">No credit card required.</p>
+        <div class="snippet-image"></div>
+      </section>
+    </main>
+    <div class="section-container">
+      <section class="info-section">
+        <div class="customizable-image"></div>
+        <div class="info-container">
+          <h1 class="title">A fully customizable code snippet editor</h1>
+          <p class="info">
+            Fully customize the color scheme of your code snippet, or use our
+            own premade color schemes. Export your code snippets in JPG, PDF,
+            PNG or any of the other 10+ common extensions.
+          </p>
+          <div class="button">
+            <a href="#">Get Started <span>- it's Free</span></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div id="logo">
+        <a href="index.html"
+          ><img src="./Assets/Logo.svg" alt="Logo of Snippets"
+        /></a>
+      </div>
+
+      <ul>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
