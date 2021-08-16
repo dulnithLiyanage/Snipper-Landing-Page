@@ -2,7 +2,7 @@
 
 Created for [codewell.cc](https://codewell.cc)
 
-Created with `HTML` and `SCSS`
+Created with **HTM** and **SCSS**
 
 ## Desktop View
 ![Desktop View](https://user-images.githubusercontent.com/87293899/129499161-cb7886f7-de39-484e-9b6b-c90da40708ab.png)
