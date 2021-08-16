@@ -1,0 +1,19 @@
+$primary-color: black;
+$contrast-color: rgb(179, 179, 179);
+$secondary-color: rgb(19, 19, 19);
+$background-color: white;
+
+$main-font: "Poppins", sans-serif;
+
+$bolder: 700;
+$bold: 500;
+$subtle: 450;
+$regular: 400;
+$thin: 300;
+$thinner: 200;
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

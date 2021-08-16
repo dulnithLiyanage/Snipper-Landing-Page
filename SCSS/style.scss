@@ -1,0 +1,342 @@
+@import "resets";
+@import "variable";
+
+* {
+  font-family: $main-font;
+}
+
+@mixin mobile {
+  .nav {
+    position: fixed;
+    width: 100vw;
+    height: 12.5vh;
+    z-index: 1;
+  }
+
+  .nav ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav ul li {
+    display: inline-block;
+    min-height: auto;
+    line-height: 15px;
+    margin: 30px 20px;
+  }
+
+  .nav #logo {
+    float: left;
+    margin: 30px 20px;
+  }
+
+  .nav ul #menu {
+    float: right;
+    margin-top: 35px;
+  }
+
+  .nav .desktop-menu {
+    display: none;
+  }
+
+  nav.white {
+    background-color: white;
+    z-index: 2;
+    box-shadow: 0 1px 5px 1px rgb(92, 92, 92);
+  }
+
+  main {
+    height: 110vh;
+    background: url("../Assets/Background.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .main-section {
+    @include flex;
+    text-align: center;
+    flex-direction: column;
+    position: absolute;
+    width: 90%;
+    margin-top: 80px;
+  }
+
+  .main-section > * {
+    margin: 10px 0 10px 0;
+    font-weight: $subtle;
+  }
+
+  .main-section .title {
+    font-weight: $bolder;
+    font-size: 56px;
+  }
+
+  .main-section .caption {
+    color: $secondary-color;
+  }
+
+  .button {
+    background-color: $primary-color;
+    padding: 10px 75px;
+    border-radius: 5px;
+    span {
+      color: $contrast-color;
+    }
+    a {
+      color: $background-color;
+    }
+  }
+
+  .info {
+    color: $secondary-color;
+  }
+
+  .main-section .snippet-image {
+    background: url("../Assets/Snippet\ Image.png") center bottom/contain
+      no-repeat;
+    height: calc(110vh - 560px);
+    width: 90%;
+    margin: 0;
+  }
+  .section-container {
+    @include flex;
+  }
+  .info-section {
+    min-height: 90vh;
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    text-align: left;
+    flex-direction: column;
+    margin-top: 40px;
+
+    .info-section > * {
+      font-weight: $subtle;
+    }
+  }
+
+  .info-section .title {
+    font-weight: $bolder;
+    font-size: 32px;
+    margin-bottom: 5px;
+  }
+
+  .info-section .button {
+    padding: 10px 25px;
+  }
+
+  .customizable-image {
+    background: url("../Assets/Customizable\ Image.png") center/contain
+      no-repeat;
+    min-height: 30vh;
+    width: 100%;
+  }
+
+  footer {
+    margin-top: 2em;
+    height: 110px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  footer ul {
+    padding-left: 1.5em;
+  }
+
+  footer #logo {
+    margin-left: 1.5em;
+  }
+
+  footer ul li {
+    display: inline-block;
+    margin-right: 30px;
+  }
+
+  .info-section .button {
+    display: inline-block;
+  }
+
+  @media (max-height: 568px) {
+    .main-section {
+      margin-top: 60px;
+    }
+
+    .main-section > * {
+      font-size: 14px;
+      font-weight: $regular;
+    }
+
+    .main-section .title {
+      font-size: 48px;
+    }
+
+    .main-section .button {
+      padding: 10px 15px;
+    }
+
+    .main-section .snippet-image {
+      min-height: calc(110vh - 481px);
+    }
+  }
+
+  @media (min-height: 720px) {
+    main {
+      height: 100vh;
+    }
+
+    .main-section .snippet-image {
+      height: calc(100vh - 560px);
+    }
+
+    .info-section {
+      min-height: 75vh;
+    }
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    .nav .mobile-menu {
+      display: none;
+    }
+
+    .nav .desktop-menu {
+      display: initial;
+    }
+    .nav ul {
+      margin-right: 2em;
+      li {
+        margin: 35px 10px;
+
+        a {
+          font-weight: $subtle;
+        }
+      }
+    }
+    .nav .button {
+      padding: 20px 25px;
+    }
+
+    .button {
+      padding: 15px 25px;
+    }
+
+    .nav-items {
+      margin-left: 24em;
+    }
+
+    .nav #logo {
+      margin: 2.5em 2em;
+    }
+
+    main {
+      height: 90vh;
+    }
+
+    .main-section {
+      margin-top: 10em;
+    }
+
+    .main-section .snippet-image {
+      height: calc(90vh - 560px);
+    }
+
+    .main-section > * {
+      font-size: 20px;
+    }
+
+    .info-section {
+      min-height: 70vh;
+      font-size: 20px;
+
+      .title {
+        margin-top: 2em;
+      }
+    }
+
+    footer ul {
+      float: right;
+      margin-right: 3em;
+    }
+
+    footer #logo {
+      display: inline-block;
+      margin-left: 4.5em;
+      margin-top: 0.5em;
+    }
+
+    .info-section .button {
+      display: inline-block;
+    }
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    .main-section > *,
+    .info-section {
+      font-size: 18px;
+    }
+
+    .nav {
+      height: 7em;
+    }
+
+    main {
+      min-height: 140vh;
+    }
+
+    .main-section {
+      margin-top: 8em;
+
+      .caption {
+        width: 60%;
+      }
+    }
+
+    .snippet-image {
+      min-height: calc(140vh - 559px + 128px);
+    }
+
+    .info-section {
+      min-height: calc(90vh - 100px);
+      @include flex;
+      flex-direction: row-reverse;
+    }
+
+    .customizable-image {
+      min-height: 20em;
+    }
+    .info-section .button {
+      display: inline-block;
+    }
+
+    .info-section .title {
+      margin-top: 0;
+      font-size: 36px;
+    }
+    footer ul {
+      float: right;
+    }
+  }
+
+  @media (min-height: 1366px) {
+    main {
+      height: 70vh;
+      min-height: 70vh;
+    }
+
+    .snippet-image {
+      min-height: calc(70vh - 559px + 128px);
+      height: calc(70vh - 559px + 128px) !important;
+    }
+  }
+}
+
+@include mobile;
+@include tablet;
+@include desktop;
