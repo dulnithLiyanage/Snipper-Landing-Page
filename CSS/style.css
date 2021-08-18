@@ -98,7 +98,7 @@ main {
 
 .main-section > * {
   margin: 10px 0 10px 0;
-  font-weight: 450;
+  font-weight: 400;
 }
 
 .main-section .title {
@@ -107,7 +107,7 @@ main {
 }
 
 .main-section .caption {
-  color: #131313;
+  color: #383838;
 }
 
 .button {
@@ -118,14 +118,16 @@ main {
 
 .button span {
   color: #b3b3b3;
+  font-weight: 400;
 }
 
 .button a {
   color: white;
+  font-weight: 500;
 }
 
 .info {
-  color: #131313;
+  color: #383838;
 }
 
 .main-section .snippet-image {
@@ -168,7 +170,7 @@ main {
 }
 
 .info-section .info-section > * {
-  font-weight: 450;
+  font-weight: 400;
 }
 
 .info-section .title {
@@ -242,6 +244,15 @@ footer ul li {
   }
 }
 
+@media (min-height: 1024px) {
+  main {
+    height: 90vh;
+  }
+  .main-section {
+    margin-top: 5.5em;
+  }
+}
+
 @media (min-width: 768px) {
   .nav .mobile-menu {
     display: none;
@@ -256,7 +267,7 @@ footer ul li {
     margin: 35px 10px;
   }
   .nav ul li a {
-    font-weight: 450;
+    font-weight: 400;
   }
   .nav .button {
     padding: 20px 25px;
@@ -297,6 +308,9 @@ footer ul li {
     display: inline-block;
     margin-left: 4.5em;
     margin-top: 0.5em;
+  }
+  .info-section {
+    margin-top: 5em;
   }
   .info-section .button {
     display: inline-block;
